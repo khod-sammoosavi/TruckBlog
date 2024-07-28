@@ -1,7 +1,11 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import Home
 
 # Create your views here.
 
+
 def home(req):
-    return HttpResponse("Hello World!")
+    context = {
+        "home": Home.objects.all()
+    }
+    return render(req, "home.html", context=context)
