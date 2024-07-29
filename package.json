@@ -4,7 +4,7 @@
   "author": "SamMoosavi <hi.sammoosavi@gmail.com>",
   "license": "GPL-3.0",
   "scripts": {
-    "dev": "npx tailwindcss -i ./assets/css/style.css -o ./assets/css/tailwind.css --build && python manage.py runserver"
+    "dev": "npx tailwindcss -i ./assets/css/main.css -o ./assets/css/tailwind.css --build && python manage.py runserver"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
