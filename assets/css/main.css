@@ -10,5 +10,5 @@
 }
 
 * {
-  @apply font-["Anton"]
+  @apply font-["Anton"] text-gray-200
 }
