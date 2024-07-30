@@ -4,6 +4,7 @@ from django.db import models
 
 
 class Home(models.Model):
+    thumbnail = models.ImageField(upload_to='images/', blank=True)
     header_title = models.CharField(
         max_length=50, blank=True, verbose_name="Header Title")
     phone = models.CharField(max_length=30, blank=True,
@@ -15,6 +16,10 @@ class Home(models.Model):
     our_story = models.TextField(blank=True, verbose_name="Our Story")
     our_slogan_title = models.CharField(
         max_length=120, blank=True, verbose_name="Our Slogan Title")
+    our_slogan_title_left = models.CharField(
+        max_length=120, blank=True, verbose_name="Our Slogan Title Left")
+    our_slogan_title_right = models.CharField(
+        max_length=120, blank=True, verbose_name="Our Slogan Title Right")
     our_slogan_left = models.TextField(
         blank=True, verbose_name="Our Slogan Left")
     our_slogan_right = models.TextField(
@@ -24,3 +29,11 @@ class Home(models.Model):
 
     def __str__(self):
         return "Home Page"
+
+
+class Menu(models.Model):
+    name = models.CharField(max_length=50, verbose_name="Name", blank=False)
+    slug = models.CharField(max_length=50, verbose_name="Slug", blank=True)
+
+    def __str__(self):
+        return self.name
