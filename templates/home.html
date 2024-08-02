@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block main %}
-  <div class="flex flex-col w-ful">
+  <div class="flex flex-col w-full">
     <div class="flex xl:flex-row flex-col w-full">
       <img class="xl:w-3/6 w-full h-full" src="{% static 'images/7.jpg' %}">
       <div class="flex flex-col xl:w-3/6 w-full bg-gray-700 items-center justify-center md:my-0 py-10">
@@ -14,20 +14,53 @@
         </div>
       </div>
     </div>
-    <div class="flex flex-col w-full py-40 bg-no-repeat items-center" style="background-image: url('{% static 'images/thumbnail-3-header.jpg' %}');">
-      {% for item in home %}
-        <h2 class="text-6xl">{{item.our_slogan_title}}</h2>
-        <div class="flex w-full mt-20 gap-10 container">
-          <div class="flex flex-col w-3/6 items-center">
-            <h3 class="text-4xl">{{item.our_slogan_title_left}}</h3>
-            <p class="text-2xl mt-10 leading-loose text-gray-400">{{item.our_slogan_left}}</p>
+    <div class="bg-no-repeat" style="background-image: url('{% static 'images/thumbnail-3-header.jpg' %}');">
+      <div class="flex flex-col xl:w-full w-5/6 xl:m-0 m-auto 2xl:py-40 xl:py-20 py-10 items-center">
+        {% for item in home %}
+          <h2 class="text-6xl">{{item.our_slogan_title}}</h2>
+          <div class="flex xl:flex-row flex-col w-full xl:mt-20 mt-10 gap-10 container">
+            <div class="flex flex-col xl:w-3/6 w-full items-center">
+              <h3 class="xl:text-4xl text-3xl">{{item.our_slogan_title_left}}</h3>
+              <p class="xl:text-2xl text-lg mt-10 leading-loose text-gray-400">{{item.our_slogan_left}}</p>
+            </div>
+            <div class="flex flex-col xl:w-3/6 w-full items-center">
+              <h3 class="xl:text-4xl text-3xl">{{item.our_slogan_title_right}}</h3>
+              <p class="xl:text-2xl text-lg mt-10 leading-loose text-gray-400">{{item.our_slogan_right}}</p>
+            </div>
           </div>
-          <div class="flex flex-col w-3/6 items-center">
-            <h3 class="text-4xl">{{item.our_slogan_title_right}}</h3>
-            <p class="text-2xl mt-10 leading-loose text-gray-400">{{item.our_slogan_right}}</p>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="flex w-full p-24 bg-neutral-800">
+      <div class="flex xl:flex-row flex-col container">
+        <div class="xl:w-3/6 w-full">
+          <p class="text-xl text-gray-400 leading-loose">Lorem ipsum odor amet, consectetuer adipiscing elit. Consectetur odio  maximus lectus nisl, accumsan turpis suscipit turpis orci. Tempor justo  taciti aptent varius hac vulputate. Sit quam ac penatibus montes finibus  efficitur convallis parturient habitant. Mollis orci turpis nibh  fringilla ullamcorper sem etiam. Phasellus proin nec tincidunt curae  maximus.</p>
+          <p class="text-xl text-gray-400 leading-loose mt-10">Lorem ipsum odor amet, consectetuer adipiscing elit. Consectetur odio  maximus lectus nisl, accumsan turpis suscipit turpis orci. Tempor justo  taciti aptent varius hac vulputate. Sit quam ac penatibus montes finibus  efficitur convallis parturient habitant. Mollis orci turpis nibh  fringilla ullamcorper sem etiam. Phasellus proin nec tincidunt curae  maximus.</p>
+          <p class="text-xl text-gray-400 leading-loose mt-10">Lorem ipsum odor amet, consectetuer adipiscing elit. Consectetur odio  maximus lectus nisl, accumsan turpis suscipit turpis orci. Tempor justo  taciti aptent varius hac vulputate. Sit quam ac penatibus montes finibus  efficitur convallis parturient habitant. Mollis orci turpis nibh  fringilla ullamcorper sem etiam. Phasellus proin nec tincidunt curae  maximus.</p>
+        </div>
+        <div class="grid xl:grid-cols-2 xl:grid-rows-2 grid-cols-1 xl:w-3/6 w-full xl:mt-0 mt-10">
+          <div class="flex flex-col w-full justify-center items-center">
+            <img src="{% static 'images/mini-1.png' %}" class="w-fit h-fit bg-red-900 p-3 rounded-full">
+            <h3 class="mt-5 text-xl">Proin eget ipsum ultrices</h3>
+            <p class="text-gray-400 mt-2 w-2/3 text-center">Sed ut perspiciis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+          </div>
+          <div class="flex flex-col w-full justify-center items-center xl:mt-0 mt-10">
+            <img src="{% static 'images/mini-2.png' %}" class="w-fit h-fit bg-red-900 p-3 rounded-full">
+            <h3 class="mt-5 text-xl">Proin eget ipsum ultrices</h3>
+            <p class="text-gray-400 mt-2 w-2/3 text-center">Sed ut perspiciis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+          </div>
+          <div class="flex flex-col w-full justify-center items-center xl:mt-0 mt-10">
+            <img src="{% static 'images/mini-3.png' %}" class="w-fit h-fit bg-red-900 p-3 rounded-full">
+            <h3 class="mt-5 text-xl">Proin eget ipsum ultrices</h3>
+            <p class="text-gray-400 mt-2 w-2/3 text-center">Sed ut perspiciis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+          </div>
+          <div class="flex flex-col w-full justify-center items-center xl:mt-0 mt-10">
+            <img src="{% static 'images/mini-4.png' %}" class="w-fit h-fit bg-red-900 p-3 rounded-full">
+            <h3 class="mt-5 text-xl">Proin eget ipsum ultrices</h3>
+            <p class="text-gray-400 mt-2 w-2/3 text-center">Sed ut perspiciis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
           </div>
         </div>
-      {% endfor %}
+      </div>
     </div>
   </div>
 {% endblock %}
