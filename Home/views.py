@@ -10,4 +10,4 @@ def home(req):
         "menus": Menu.objects.all(),
         'current_path': req.get_full_path()
     }
-    return render(req, "home.html", context=context)
+    return render(req, "Home/home.html", context=context)
