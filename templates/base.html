@@ -17,7 +17,7 @@
             <nav class="flex gap-10">
               {% for item in menus %}
               {% if current_path == item.slug %}
-                <a href="{{item.slug}}" class="text-red-600 text-3xl border-b-red-600 border-b-4 pb-1">{{item.name|upper}}</a>
+                <a href="{{item.slug}}" class="text-3xl border-b-gray-200 border-b-4 pb-1">{{item.name|upper}}</a>
               {% else %}
                 <a href="{{item.slug}}" class="text-3xl pb-1 hover:border-b-gray-200 hover:border-b-4">{{item.name|upper}}</a>
               {% endif %}
